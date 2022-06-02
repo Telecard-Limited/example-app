@@ -19,7 +19,6 @@ deploy:
     - artisan:migrate
     - npm:install
     - npm:run:prod
-    - deploy:publish
   build:
     - cd: '{{release_path}}'
     - run: 'npm run build'  
