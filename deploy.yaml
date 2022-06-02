@@ -12,8 +12,7 @@ hosts:
 tasks:
   build:
     - cd: '{{release_path}}'
-    - run: 'npm install'
-    - run: 'npm run prod'
+    - run: 'npm run build'
 
 after:
   deploy:failed: deploy:unlock
