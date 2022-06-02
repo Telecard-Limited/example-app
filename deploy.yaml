@@ -12,7 +12,7 @@ hosts:
 tasks:
   build:
     - cd: '{{release_path}}'
-    - run: 'npm run build'
+    - run: 'npm install'
+    - run: 'npm run prod'
 
-after:
-  deploy:failed: deploy:unlock
+  after('deploy:update_code', 'build');
