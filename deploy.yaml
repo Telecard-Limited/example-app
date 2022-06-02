@@ -6,7 +6,7 @@ config:
 
 hosts:
   202.123.248.7:
-    remote_user: deployer
+    remote_user: root
     deploy_path: '~/example-app'
 
 tasks:
