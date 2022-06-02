@@ -16,4 +16,4 @@ tasks:
     - run: 'npm run prod'
 
  after:
-  deploy:failed: deploy:unlock
+  ('deploy:update_code', 'build');
