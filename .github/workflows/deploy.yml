@@ -10,6 +10,16 @@ hosts:
     deploy_path: '~/example-app'
 
 tasks:
+deploy:
+    - deploy:prepare
+    - deploy:vendors
+    - artisan:storage:link
+    - artisan:view:cache
+    - artisan:config:cache
+    - artisan:migrate
+    - npm:install
+    - npm:run:prod
+    - deploy:publish
   build:
     - cd: '{{release_path}}'
     - run: 'npm run build'  
