@@ -16,7 +16,6 @@ deploy:
     - artisan:storage:link
     - artisan:view:cache
     - artisan:config:cache
-    - artisan:migrate
   build:
     - cd: '{{release_path}}'
     - run: 'npm run build'  
