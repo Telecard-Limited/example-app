@@ -6,7 +6,7 @@ config:
 
 hosts:
     hostname: '202.123.248.7'
-    remote_user: root
+    remote_user: shafiq
     deploy_path: '~/example-app'
 
 tasks:
