@@ -10,11 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     
-    hosts:
-      202.123.248.7:
-    remote_user: shafiq
-    deploy_path: '~/example-app'
-    
     steps:
     - uses: actions/checkout@v2
   
