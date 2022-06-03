@@ -10,6 +10,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     
+    hosts:
+      202.123.248.7:
+    remote_user: shafiq
+    deploy_path: '~/example-app'
+    
     steps:
     - uses: actions/checkout@v2
   
@@ -17,7 +22,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.1' 
-
+    
     - name: Deploy
       uses: deployphp/action@v1
       with:
