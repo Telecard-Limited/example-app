@@ -28,9 +28,6 @@ jobs:
       import:
         - recipe/laravel.php
 
-      config:
-  repository: https://github.com/Telecard-Limited/example-app.git
-
 hosts:
   202.123.248.7:
     remote_user: shafiq
