@@ -30,7 +30,7 @@ jobs:
       DOT_ENV: ${{ secrets.DOT_ENV_PRODUCTION }}
     run: php vendor/bin/dep deploy prod --branch="main" -vv
     
-     - name: Install Composer dependencies
+    - name: Install Composer dependencies
     run: composer install --no-interaction --no-progress --prefer-dist
 
     build:
