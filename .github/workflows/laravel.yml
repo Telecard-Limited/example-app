@@ -35,4 +35,4 @@ env:
     - cd: '{{release_path}}'
     - run: 'npm run build'
 
-deploy:failed deploy:unlock
+after('deploy:failed', 'deploy:unlock');
