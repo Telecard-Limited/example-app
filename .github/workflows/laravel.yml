@@ -32,6 +32,5 @@ jobs:
 
     - name: build
     - cd: '{{release_path}}'
-      run: |
-          npm install
-          npm run prod
+    - run: 'npm install'
+    - run: 'npm run build'
