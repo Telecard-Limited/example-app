@@ -33,8 +33,9 @@ jobs:
     - name: Install Composer dependencies
       run: composer install --no-interaction --no-progress --prefer-dist
 
-      build:
+    build:
       cd: '{{release_path}}'
+    - name: Install Dependencies
       run: |
         npm install
         npm run build
