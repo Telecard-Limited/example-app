@@ -31,8 +31,7 @@ env:
     remote_user: shafiq
     deploy_path: '~/example-app1'
 
-tasks:
-  build:
+    build:
     - cd: '{{release_path}}'
     - run: 'npm run build'
 
