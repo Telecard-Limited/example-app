@@ -32,4 +32,4 @@ jobs:
 
     build:
       cd: '{{release_path}}'
-    run: 'npm run build'
+    run: 'npm install'
