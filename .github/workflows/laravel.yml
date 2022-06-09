@@ -36,4 +36,4 @@ env:
     - run: 'npm run build'
 
 after:
-  deploy:failed: deploy:unlock
+  deploy:failed deploy:unlock
