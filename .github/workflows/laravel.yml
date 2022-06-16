@@ -17,6 +17,9 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.1' 
+        
+    - name: Install Composer dependencies
+      run: composer install --no-interaction --no-progress --prefer-dist
     
     - name: Deploy
       uses: deployphp/action@v1
@@ -24,11 +27,3 @@ jobs:
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
         dep: deploy
-        
-    - name: Install Composer dependencies
-      run: composer install --no-interaction --no-progress --prefer-dist
-      
-    - name: Deploy to Production
-      env:
-          DOT_ENV: ${{ secrets.DOT_ENV_PRODUCTION }}
-      run: php vendor/bin/dep deploy
