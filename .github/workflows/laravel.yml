@@ -23,7 +23,7 @@ jobs:
       with:
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-        vendor/bin/deployer.phar: deployer
+        dep: deploy
       
     - name: Deploy to Production
       env:
